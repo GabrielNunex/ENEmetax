@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-estilos="est1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENEMETAX</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./js/script.js" defer></script>
+    <script src="./js/timer.js" defer></script>
+    <script src="./js/check.js" defer></script>
+    <link rel="shortcut icon" href="./assets/icons/target.svg" type="image/svg">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="title">
+            ENEMETAX
+        </h1>
+        <div class="titulo">
+            <h2 class="ene">ENE</h2>
+            <h2 class="metax">METAX</h2>
+        </div>
+
+    </div>
+    </header>
+
+    <main class="corpo">
+        <section class="checklist">
+            <div class="estilos">
+                <h3 class="estilos_titulo">Estilos</h3>
+                
+                <ul class="estilos_opcoes">
+                    <li class="estilos_opcao estilos_ativo estilos_opcao-1"></li>
+                    <li class="estilos_opcao estilos_opcao-2"></li>
+                    <li class="estilos_opcao estilos_opcao-3"></li>
+                    <li class="estilos_opcao estilos_opcao-4"></li>
+                </ul>
+            </div>
+            
+            <div class="checklist-itens">
+                <h3 class="chelist-itens_titulo">Demandas:</h3>
+
+                <div class="checklist-add">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="checklist-add_icone"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                    <span class="checklist-add_span">Adicionar tarefa</span>
+                </div>
+
+                <div class="checklist-scroll">
+                    <ul class="checklist-demandas">
+                    <!-- Modelo de preenchimento
+                        <li class="checklist-demandas_inserida">
+                            <div class="checkboxTexto">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="checklist-demandas_inseridabox" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Z"/></svg>
+                                <p class="checklist-demandas_inseridatexto">Texto Inserido pelo usuário</p>
+                            </div>
+                            
+                            <svg class="checklist-demandas_inseridadeleta" viewBox="0 -960 960 960"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                        </li>
+                    -->    
+    
+                    
+                        <li class="checklist-demandas_modelo0 hidden">
+                            <label for="checkDemanda" class="checklist-demandas_modelo">
+                                <div class="checklist-demandas_descricao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="checklist-demandas_box" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Z"/></svg>
+        
+                                    <input type="text" name="" class="checklist-demandas_texto" id="checkDemanda" placeholder="Escreva a demanda">
+                                </div>
+    
+                                <div class="checklist-demandas_confirmadores">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="checklist-demandas_confirmar" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+    
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="checklist-demandas_fechar"  viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                                </div>
+                            </label>
+    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="controle">
+            <div class="controle_switch">
+                <label for="controle_tempo" class="controle-tempo">
+                    <span class="controle_controle">Controle</span>
+                    <div class="switch">
+                        <input type="checkbox" name="alterna entre controle e tempo" id="controle_tempo" onclick="trocarInput()">
+                        <span class="controle_bola"></span>
+                    </div>
+                    <span class="controle_tempo">Tempo</span>
+                </label>
+            </div>
+
+            <div class="tempo" id="tempo">
+                <div class="tempo_timer" id="tempo_timer">30 : 00</div>
+                <label for="btnStart" class="start_switch">
+                    <input type="checkbox" id="btnStart">
+                    <span class="tempo_botao">Start</span>
+                </label>
+            </div>
+
+            <div class="controle_inputs" id="cInputs">
+                <div class="input_timer">
+                        <span class="timer_titulo">Tempo:</span>
+                        <div class="timer_opcoes">
+                            <div class="input_timerbox">
+                                <span class="timer_dica">Máximo: 120:00 <br> Mínimo: 05:00</span> 
+                                <hr>
+                                <div id="timer">
+                                    <label for="minutos" class="timer_minutos">
+                                        <input type="number" name="" id="tminutos" value="30" max="120" min="30" >
+                                    </label>
+                                    <span class="separacao">:</span>
+                                    <label for="segundos" class="timer_segundos">
+                                        <input type="number" name="" id="tsegundos" value="00" max="59" min="00">
+                                    </label>
+                                </div>
+                            </div>
+                        
+                            <button class="timer_botao" id="timer_botao">Confirmar</button>
+                        </div>
+                </div>
+
+                <div class="input_descanso">
+                    <span class="descanso_titulo">Descanso:</span>
+                    <div class="descanso_opcoes">
+                        <div class="input_descansobox">
+                            <span class="descanso_dica">Máximo: 30:00 <br> Mínimo: 01:00</span> 
+                            <hr>
+                            <div id="descanso">
+                                <label for="minutos" class="descanso_minutos">
+                                    <input type="number" name="" id="dminutos" value="05" max="30" min="5" >
+                                </label>
+                                <span class="separacao">:</span>
+                                <label for="segundos" class="descanso_segundos">
+                                    <input type="number" name="" id="dsegundos" value="00" max="59" min="00">
+                                </label>
+                            </div>
+                        </div>
+                    
+                        <button class="descanso_botao" id="descanso_botao">Confirmar</button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="controle_musica" id="cMusica">
+                <label for="playMusic" class="musica_switch">
+                    <span class="musica_titulo">Música</span>
+                    <input type="checkbox" id="playMusic" onclick="trocarIcone()">
+                    <i class="material-icons">play_arrow</i>
+                </label>
+                <audio src="./assets/audio/Jazz.mp3" controls autoplay loop></audio>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
